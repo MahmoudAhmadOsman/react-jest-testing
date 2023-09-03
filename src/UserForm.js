@@ -12,13 +12,13 @@ const UserForm = ({ onUserAdd }) => {
 	};
 
 	return (
-		<div className="userForm">
+		<div className="user_form">
 			<div className="container">
 				<h1>Add New User</h1> <hr />
 				<div className="row mt-3">
 					<form onSubmit={handleSubmit}>
 						<div className="input-group mb-3">
-							<label className="input-group-text" htmlFor="email">
+							<label className="input-group-text" htmlFor="name">
 								Name
 							</label>
 							<input
@@ -31,12 +31,12 @@ const UserForm = ({ onUserAdd }) => {
 							/>
 						</div>
 
-						<div class="input-group mb-3">
+						<div className="input-group mb-3">
 							<label className="input-group-text" htmlFor="email">
 								Email
 							</label>
 							<input
-								type="text"
+								type="email"
 								className="form-control form-control-lg"
 								placeholder="Enter your  email"
 								name="email"
@@ -44,7 +44,6 @@ const UserForm = ({ onUserAdd }) => {
 								onChange={(e) => setEmail(e.target.value)}
 							/>
 						</div>
-
 						<button type="submit" className="btn btn-outline-success btn-lg">
 							Add User
 						</button>

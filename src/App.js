@@ -19,10 +19,6 @@ function App() {
 					<UserList users={users} />
 				</div>
 			</div>
-			{/* <UserForm onUserAdd={onUserAdd} /> */}
-			{/* <hr />
-
-			<UserList users={users} /> */}
 		</div>
 	);
 }

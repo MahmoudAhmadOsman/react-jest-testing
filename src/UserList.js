@@ -3,7 +3,7 @@ import React from "react";
 const UserList = ({ users }) => {
 	const renderedUsers = users.map((user) => {
 		return (
-			<tr key={user.id}>
+			<tr key={user.name}>
 				<td>{user.name}</td>
 				<td>{user.email}</td>
 			</tr>
@@ -13,7 +13,7 @@ const UserList = ({ users }) => {
 	return (
 		<div className="container mt-3">
 			{users.length > 0 ? (
-				<div>
+				<>
 					<h2>User List</h2>
 					<table className="table table-striped">
 						<thead>
@@ -24,7 +24,7 @@ const UserList = ({ users }) => {
 						</thead>
 						<tbody>{renderedUsers}</tbody>
 					</table>
-				</div>
+				</>
 			) : (
 				""
 				// <div className="text-danger">No uses found!</div>
