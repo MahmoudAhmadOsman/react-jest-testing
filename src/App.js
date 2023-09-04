@@ -18,6 +18,17 @@ function App() {
 				<div className="col-md-6">
 					<UserList users={users} />
 				</div>
+
+				<footer className="mt-5 text-center">
+					<hr />
+					<p className="text-muted display-6">
+						React & Jest testing application
+					</p>
+					<p className="text-muted">
+						&copy; Copyright {new Date().getFullYear()}. All rights reserved.
+						Developed By Mahmoud Osman.
+					</p>
+				</footer>
 			</div>
 		</div>
 	);
