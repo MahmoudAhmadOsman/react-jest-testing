@@ -26,10 +26,12 @@ const UserList = ({ users }) => {
 					</table>
 				</>
 			) : (
-				<div className="text-danger">
-					<p>No uses found!</p>
-					<span>Please add a user to get started!</span>
-				</div>
+				<>
+					<div className="text-danger">
+						<p>No uses found!</p>
+						<span>Please add a user to get started!</span>
+					</div>{" "}
+				</>
 			)}
 		</div>
 	);

@@ -19,10 +19,11 @@ const UserForm = ({ onUserAdd }) => {
 					<form onSubmit={handleSubmit}>
 						<div className="input-group mb-3">
 							<label className="input-group-text" htmlFor="name">
-								Name
+								Enter Name
 							</label>
 							<input
 								type="text"
+								id="name"
 								className="form-control form-control-lg"
 								placeholder="Enter your name"
 								name="name"
@@ -33,10 +34,12 @@ const UserForm = ({ onUserAdd }) => {
 
 						<div className="input-group mb-3">
 							<label className="input-group-text" htmlFor="email">
-								Email
+								Enter Email
 							</label>
+
 							<input
 								type="email"
+								id="email"
 								className="form-control form-control-lg"
 								placeholder="Enter your  email"
 								name="email"
