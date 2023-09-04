@@ -30,7 +30,7 @@ const UserList = ({ users }) => {
 					<div className="text-danger">
 						<p>No uses found!</p>
 						<span>Please add a user to get started!</span>
-					</div>{" "}
+					</div>
 				</>
 			)}
 		</div>

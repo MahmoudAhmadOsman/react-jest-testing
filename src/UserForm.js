@@ -3,12 +3,20 @@ import React, { useState } from "react";
 const UserForm = ({ onUserAdd }) => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
+	const [error, setError] = useState(false);
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		onUserAdd({ name, email });
-		setName("");
-		setEmail("");
+
+		if (!name || !email) {
+			setError(true);
+			return;
+		} else {
+			onUserAdd({ name, email });
+			setName("");
+			setEmail("");
+			setError(false);
+		}
 	};
 
 	return (
@@ -17,10 +25,8 @@ const UserForm = ({ onUserAdd }) => {
 				<h1 className="text-success">Add New User</h1> <hr />
 				<div className="row mt-3">
 					<form onSubmit={handleSubmit}>
-						<div className="input-group mb-3">
-							<label className="input-group-text" htmlFor="name">
-								Enter Name
-							</label>
+						<div className="mb-3">
+							<label htmlFor="name">Enter Name</label>
 							<input
 								type="text"
 								id="name"
@@ -30,12 +36,16 @@ const UserForm = ({ onUserAdd }) => {
 								value={name}
 								onChange={(e) => setName(e.target.value)}
 							/>
+
+							{error && name.length <= 0 ? (
+								<span className="text-danger"> Name is required!</span>
+							) : (
+								""
+							)}
 						</div>
 
-						<div className="input-group mb-3">
-							<label className="input-group-text" htmlFor="email">
-								Enter Email
-							</label>
+						<div className="mb-3">
+							<label htmlFor="email">Enter Email</label>
 
 							<input
 								type="email"
@@ -46,6 +56,12 @@ const UserForm = ({ onUserAdd }) => {
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
 							/>
+
+							{error && email.length <= 0 ? (
+								<span className="text-danger">Email is required!</span>
+							) : (
+								""
+							)}
 						</div>
 						<button type="submit" className="btn btn-outline-success btn-lg">
 							Add User
