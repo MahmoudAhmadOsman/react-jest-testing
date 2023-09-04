@@ -14,7 +14,7 @@ const UserList = ({ users }) => {
 		<div className="container mt-3">
 			{users.length > 0 ? (
 				<>
-					<h2>User List</h2>
+					<h2 className="text-success">User List</h2> <hr />
 					<table className="table table-striped">
 						<thead>
 							<tr>
@@ -26,8 +26,10 @@ const UserList = ({ users }) => {
 					</table>
 				</>
 			) : (
-				""
-				// <div className="text-danger">No uses found!</div>
+				<div className="text-danger">
+					<p>No uses found!</p>
+					<span>Please add a user to get started!</span>
+				</div>
 			)}
 		</div>
 	);

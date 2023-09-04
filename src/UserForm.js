@@ -14,7 +14,7 @@ const UserForm = ({ onUserAdd }) => {
 	return (
 		<div className="user_form">
 			<div className="container">
-				<h1>Add New User</h1> <hr />
+				<h1 className="text-success">Add New User</h1> <hr />
 				<div className="row mt-3">
 					<form onSubmit={handleSubmit}>
 						<div className="input-group mb-3">
