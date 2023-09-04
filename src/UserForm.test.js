@@ -23,19 +23,28 @@ test("it calls onUserAdd when the form is submitted", () => {
 
 	render(<UserForm onUserAdd={mock} />);
 
+	//Find the two inputs
 	const [nameInput, emailInput] = screen.getAllByRole("textbox");
+
+	//Simulate typing in a name
 
 	user.click(nameInput);
 	user.keyboard("John");
 
+	//Simulate typing in an email
 	user.click(emailInput);
 	user.keyboard("john6@yahoo.com");
 
+	//Find the button
 	const button = screen.getByRole("button");
 
+	//Simulate clicking the button
 	user.click(button);
 
-	expect(mock).toHaveBeenCalled();
 
+	
+
+	//Assetion - Make sure the mock function was called with the correct data
+	expect(mock).toHaveBeenCalled();
 	expect(mock).toHaveBeenCalledWith({ name: "John", email: "john6@yahoo.com" });
 });
