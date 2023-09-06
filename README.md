@@ -4,11 +4,11 @@ This application is a small React JS application primarily developed for the pur
 
 ## Testing Components
 
-In this application, we focus on testing two key components:
+In this application, I focus on testing two key components:
 
 ### UserForm.js
 
-This component is responsible for user input and interaction. We thoroughly test it using various Jest functions and techniques, including but not limited to:
+This component is responsible for user input and interaction. I thoroughly test it using various Jest functions and techniques, including but not limited to:
 
 - `getByRole`: To access and interact with elements by their role.
 - `jest.fn()`: To create mock functions and track their usage.
@@ -17,8 +17,8 @@ This component is responsible for user input and interaction. We thoroughly test
 
 ### UserList
 
-The UserList component displays a list of users. We conduct comprehensive testing on this component as well, applying similar Jest testing methods.
+The UserList component displays a list of users. I conduct comprehensive testing on this component as well, applying similar Jest testing methods.
 
 ## Conclusion
 
-This React application serves as a practical example of how to employ Jest and @testing-library/user-event for testing React components. By thoroughly testing UserForm.js and UserList, we ensure the reliability and functionality of these essential parts of the application. This approach helps maintain code quality and provides confidence in the application's behavior.
+This React application serves as a practical example of how to employ Jest and @testing-library/user-event for testing React components. By thoroughly testing UserForm.js and UserList, I ensure the reliability and functionality of these essential parts of the application. This approach helps maintain code quality and provides confidence in the application's behavior.
