@@ -5,8 +5,8 @@ const UserForm = ({ onUserAdd }) => {
 	const [email, setEmail] = useState("");
 	const [error, setError] = useState(false);
 
-	const handleSubmit = (event) => {
-		event.preventDefault();
+	const handleSubmit = (e) => {
+		e.preventDefault();
 
 		if (!name || !email) {
 			setError(true);

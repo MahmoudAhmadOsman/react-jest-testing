@@ -24,7 +24,7 @@ function App() {
 					<p className="text-muted display-6">
 						React & Jest testing application
 					</p>
-					<p className="text-muted"  style={{fontSize: "11px"}}>
+					<p className="text-muted" style={{ fontSize: "11px" }}>
 						&copy; Copyright {new Date().getFullYear()}. All rights reserved.
 						Developed By Mahmoud Osman.
 					</p>
