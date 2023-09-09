@@ -54,7 +54,6 @@ test("empty the name and email fields when form is submitted", () => {
 	<UserForm onUserAdd={() => {}} />;
 
 	//find the two inputs and button
-
 	const nameInput = screen.getByRole("textbox", { name: /name/i });
 	const emailInput = screen.getByRole("textbox", { name: /email/i });
 	const button = screen.getByRole("button");
