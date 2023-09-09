@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-
 import UserForm from "./UserForm";
 import user from "@testing-library/user-event";
 
@@ -47,4 +46,28 @@ test("it calls onUserAdd when the form is submitted", () => {
 	//Assetion - Make sure the mock function was called with the correct data
 	expect(mock).toHaveBeenCalled();
 	expect(mock).toHaveBeenCalledWith({ name: "John", email: "john6@yahoo.com" });
+});
+
+//test 3
+test("empty the name and email fields when form is submitted", () => {
+	//render the component
+	<UserForm onUserAdd={() => {}} />;
+
+	//find the two inputs and button
+
+	const nameInput = screen.getByRole("textbox", { name: /name/i });
+	const emailInput = screen.getByRole("textbox", { name: /email/i });
+	const button = screen.getByRole("button");
+
+	//Simulate typing in a name
+	user.click(nameInput);
+	user.keyboard("john");
+	user.click(emailInput);
+	user.keyboard("john99@yahoo.com");
+
+	user.click(button);
+
+	//Assertion - Make sure the name and email fields are empty
+	expect(nameInput).toHaveValue("");
+	expect(emailInput).toHaveValue("");
 });

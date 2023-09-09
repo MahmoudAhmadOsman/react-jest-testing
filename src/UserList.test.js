@@ -40,6 +40,9 @@ test("render the email and  name of each user", () => {
 
 	//Assertion:
 	for (let user of users) {
+		//	const name = screen.getByRole("cell", {name: user.name});
+		//	const email = screen.getByRole("cell", {name: user.email});
+
 		const name = screen.getByText(user.name);
 		const email = screen.getByText(user.email);
 
