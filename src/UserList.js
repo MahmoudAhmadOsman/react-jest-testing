@@ -22,7 +22,7 @@ const UserList = ({ users }) => {
 								<th>Email</th>
 							</tr>
 						</thead>
-						{/* Special to be able to select this element */}
+						{/* Special: data-testid is used to be able to select this element */}
 						<tbody data-testid="users">{renderedUsers}</tbody>
 					</table>
 				</>
