@@ -17,8 +17,6 @@ const renderUserListComponent = () => {
 		},
 	];
 
-	//2. Find all the rows in the table
-
 	render(<UserList users={users} />);
 
 	return {
@@ -27,7 +25,7 @@ const renderUserListComponent = () => {
 };
 
 test("render one row per user", () => {
-	//1. render the component - that expect list of users
+	//1. render the component
 	renderUserListComponent();
 
 	const rows = within(screen.getByTestId("users")).getAllByRole("row");
