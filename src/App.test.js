@@ -31,7 +31,8 @@ test("it receives a new user and shows it on a list", () => {
 
 	const name = screen.getByRole("cell", { name: "jane" });
 	const email = screen.getByRole("cell", { email: "jame99@yahoo.com" });
-	screen.logTestingPlaygroundURL();
+
+	screen.logTestingPlaygroundURL(); // for debugging purpose
 
 	expect(name).toBeInTheDocument();
 	expect(email).toBeInTheDocument();
