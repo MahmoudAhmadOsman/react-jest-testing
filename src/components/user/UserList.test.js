@@ -1,5 +1,5 @@
 import { render, screen, within } from "@testing-library/react";
-import UserList from "./UserList";
+import UserList from "./components/user/UserList";
 
 const renderUserListComponent = () => {
 	const users = [
