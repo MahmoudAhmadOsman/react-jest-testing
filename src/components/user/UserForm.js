@@ -27,8 +27,7 @@ const UserForm = ({ onUserAdd }) => {
 					<form onSubmit={handleSubmit}>
 						<div className="mb-3">
 							<label htmlFor="name">
-								Enter Name &nbsp;
-								<span className="text-muted fw-bold">*</span>
+								Enter Name &nbsp;<span className="text-muted fw-bold">*</span>
 							</label>
 							<input
 								type="text"
