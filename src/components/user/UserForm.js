@@ -26,11 +26,18 @@ const UserForm = ({ onUserAdd }) => {
 				<div className="row mt-3">
 					<form onSubmit={handleSubmit}>
 						<div className="mb-3">
-							<label htmlFor="name">Enter Name</label>
+							<label htmlFor="name">
+								Enter Name &nbsp;
+								<span className="text-muted fw-bold">*</span>
+							</label>
 							<input
 								type="text"
 								id="name"
-								className="form-control form-control-lg"
+								className={`mb-3 ${
+									error && name.length <= 0
+										? "form-control form-control-lg name-danger"
+										: "form-control form-control-lg"
+								}`}
 								placeholder="Enter your name"
 								name="name"
 								value={name}
@@ -45,12 +52,18 @@ const UserForm = ({ onUserAdd }) => {
 						</div>
 
 						<div className="mb-3">
-							<label htmlFor="email">Enter Email</label>
+							<label htmlFor="email">
+								&nbsp;Enter Email <span className="text-muted fw-bold">*</span>
+							</label>
 
 							<input
 								type="email"
 								id="email"
-								className="form-control form-control-lg"
+								className={`mb-3 ${
+									error && email.length <= 0
+										? "form-control form-control-lg email-danger"
+										: "form-control form-control-lg"
+								}`}
 								placeholder="Enter your  email"
 								name="email"
 								value={email}
