@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import AccessibleName from "./AccessibleName";
 
-test("can select by accessible or elemest with same name", () => {
+test("can select by accessible or elements with same name", () => {
 	render(<AccessibleName />);
 
 	const submitButton = screen.getByRole("button", {
