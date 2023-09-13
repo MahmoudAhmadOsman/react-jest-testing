@@ -1,5 +1,5 @@
 import { render, screen, within } from "@testing-library/react";
-import UserList from "./components/user/UserList";
+import UserList from "./UserList";
 
 const renderUserListComponent = () => {
 	const users = [
@@ -38,13 +38,18 @@ test("render the email and  name of each user", () => {
 	//1. render the component
 	const { users } = renderUserListComponent();
 
+	// Log the rendered component for debugging
+	//eslint-disable-next-line
+	screen.debug();
+
 	//Assertion:
 	for (let user of users) {
-		//	const name = screen.getByRole("cell", {name: user.name});
-		//	const email = screen.getByRole("cell", {name: user.email});
-
-		const name = screen.getByText(user.name);
-		const email = screen.getByText(user.email);
+		const name = screen.getByRole("cell", {
+			name: user.name,
+		});
+		const email = screen.getByRole("cell", {
+			name: user.email,
+		});
 
 		expect(name).toBeInTheDocument();
 		expect(email).toBeInTheDocument();
