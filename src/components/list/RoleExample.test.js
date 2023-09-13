@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen } from "@testing-library/react";
 import RoleExample from "./RoleExample";
 
 test("can find elements by role", () => {
@@ -17,13 +17,13 @@ test("can find elements by role", () => {
 		"textbox",
 		"listitem",
 		"list",
-  ];
-  
-  //2.
+	];
+
+	//2.
 
 	for (let role of roles) {
-    const el = screen.getByRole(role);
-    //3.
+		const el = screen.getByRole(role);
+		//3.
 		expect(el).toBeInTheDocument();
 	}
 });
