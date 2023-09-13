@@ -38,9 +38,11 @@ const UserForm = ({ onUserAdd }) => {
 										? "form-control form-control-lg name-danger"
 										: "form-control form-control-lg"
 								}`}
-								placeholder="Enter your name"
-								name="name"
-								value={name}
+								placeholder={`${
+									error && name.length <= 0
+										? "Please provide your full name!"
+										: "Enter your name"
+								}`}
 								onChange={(e) => setName(e.target.value)}
 							/>
 
@@ -64,7 +66,11 @@ const UserForm = ({ onUserAdd }) => {
 										? "form-control form-control-lg email-danger"
 										: "form-control form-control-lg"
 								}`}
-								placeholder="Enter your  email"
+								placeholder={`${
+									error && email.length <= 0
+										? "Please provide valid email address!"
+										: "Enter your email"
+								}`}
 								name="email"
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}

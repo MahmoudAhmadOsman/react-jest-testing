@@ -24,3 +24,7 @@ code {
 .user_form input[type="email"].email-danger {
 	border: 2px solid #f20000;
 }
+
+.user_form input::placeholder {
+	font-size: 16px;
+}
