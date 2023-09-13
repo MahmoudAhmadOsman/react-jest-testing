@@ -33,7 +33,7 @@ const UserForm = ({ onUserAdd }) => {
 							<input
 								type="text"
 								id="name"
-								className={`mb-3 ${
+								className={`mb-0 ${
 									error && name.length <= 0
 										? "form-control form-control-lg name-danger"
 										: "form-control form-control-lg"
@@ -59,7 +59,7 @@ const UserForm = ({ onUserAdd }) => {
 							<input
 								type="email"
 								id="email"
-								className={`mb-3 ${
+								className={`mb-0 ${
 									error && email.length <= 0
 										? "form-control form-control-lg email-danger"
 										: "form-control form-control-lg"
