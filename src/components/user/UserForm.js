@@ -13,8 +13,9 @@ const UserForm = ({ onUserAdd }) => {
 			return;
 		} else {
 			onUserAdd({ name, email });
-			setName("");
+
 			setEmail("");
+			setName("");
 			setError(false);
 		}
 	};
@@ -27,8 +28,9 @@ const UserForm = ({ onUserAdd }) => {
 					<form onSubmit={handleSubmit}>
 						<div className="mb-3">
 							<label htmlFor="name">
-								Enter Name &nbsp;<span className="text-muted fw-bold">*</span>
+								&nbsp;Enter Name <span className="text-danger fw-bold">*</span>
 							</label>
+
 							<input
 								type="text"
 								id="name"
@@ -42,11 +44,13 @@ const UserForm = ({ onUserAdd }) => {
 										? "Please provide your full name!"
 										: "Enter your name"
 								}`}
+								name="name"
+								value={name}
 								onChange={(e) => setName(e.target.value)}
 							/>
 
 							{error && name.length <= 0 ? (
-								<span className="text-danger"> Name is required!</span>
+								<span className="text-danger">Name is required!</span>
 							) : (
 								""
 							)}
@@ -54,7 +58,7 @@ const UserForm = ({ onUserAdd }) => {
 
 						<div className="mb-3">
 							<label htmlFor="email">
-								&nbsp;Enter Email <span className="text-muted fw-bold">*</span>
+								&nbsp;Enter Email <span className="text-danger fw-bold">*</span>
 							</label>
 
 							<input
@@ -81,9 +85,18 @@ const UserForm = ({ onUserAdd }) => {
 								""
 							)}
 						</div>
-						<button type="submit" className="btn btn-outline-success btn-lg">
-							Add User
-						</button>
+
+						{error && name.length <= 0 && error && email.length <= 0 ? (
+							<button className="btn btn-outline-success btn-lg disabled">
+								{" "}
+								Add User
+							</button>
+						) : (
+							<button className="btn btn-outline-success btn-lg">
+								{" "}
+								Add User
+							</button>
+						)}
 					</form>
 				</div>
 			</div>
