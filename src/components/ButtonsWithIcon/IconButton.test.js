@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import IconButton from "./IconButton";
 
-test("find element based on label", () => {
+test("should find elements based on label", () => {
 	render(<IconButton />);
 
 	// Find the input elements by their ARIA roles
