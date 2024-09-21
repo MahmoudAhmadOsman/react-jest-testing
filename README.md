@@ -1,7 +1,6 @@
 # React Testing Application
 
-This application is a small React JS application primarily developed for the purpose of testing. It leverages the power of Jest, a JavaScript testing framework, and React's @testing-library/user-event library to facilitate comprehensive testing.
-
+This React JS application is designed for testing purposes. It utilizes Jest, a JavaScript testing framework, along with React's @testing-library/user-event, to enable thorough and efficient testing.
 ## Testing Components
 
 In this application, I focus on testing two key components:
